@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Kategori Tantrum Anak Balita</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        background-color: #DFFFD8;
+      }
+      h1 {
+        font-size: 32px;
+        text-align: center;
+        margin-top: 50px;
+      }
+      h2 {
+        font-size: 24px;
+        text-align: center;
+        margin-top: 30px;
+      }
+      p {
+        text-align: center;
+      }
+    
+      .arrow {
+        position: center;
+        text-align: center;
+        padding-right: 10px;
+        background-color: #FFD1D1;
+        color: black;
+        style:bold;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 12px;
+      }
+      
+      .arrow:before {
+        content: "\2190";
+        display: inline-block;
+        margin-right: 5px;
+        transform: translateY(-1px);
+      }
+      
+    </style>
+  </head>
+  <body>
+    <h1>Hasil Kuisioner</h1>
+    {% if kategori %}
+        <p>Kategori Tantrum: {{ kategori }}</p>
+        <p>Solusi: {{ solusi }}</p>
+    {% else %}
+        <p>Silakan pilih salah satu kategori tantrum.</p>
+    {% endif %}
+    <h2> </h2>
+    <a href="/"><span class="arrow">Return To Homepage</span></a>
+
+    <h1>Rekomendasi Pilihan Video Edukasi Tantrum</h1>
+	<table class="center">
+		<col class="rendah">
+		<col class="tinggi">
+		<tr>
+			<th>Tantrum Rendah</th>
+			<th>Tantrum Tinggi</th>
+		</tr>
+		<tr>
+			<td>
+				<a href="https://www.youtube.com/watch?v=hpTtDRbRbz4" target="_blank">Tantrum Pada Anak</a>
+				
+			</td>
+			<td> 
+				<a href="https://youtu.be/rayzL6qsZ6k" target="_blank">Anak Tantrum Membenturkan Kepala, Apa Yang Harus Dilakukan</a>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="https://youtu.be/YYg9Sb7HSTE" target="_blank">Melatih Emosi Anak 2-3 Tahun Saat Keinginan Tak Dituruti</a>
+			</td>
+			<td>
+				<a href="https://youtu.be/Y7Q6SdnAEkU" target="_blank">Cara Mengatasi Anak yang Marah dan Memukul Jika di Tegur </a>
+				
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="https://youtu.be/BRUH2RhTjJk" target="_blank">PARENTING : Tips Mengatasi Tantrum Pada Anak Balita usia 1-5 tahun</a>
+			</td>
+			<td>
+				<a href="https://youtu.be/Vx6oWn09tNU" target="_blank">Cara Menangani Anak yang Suka Tantrum/ Melempar Barang</a>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="https://youtu.be/gRQCyQxj9Jg" target="_blank">Melatih Anak Mengelola Emosi</a>
+			</td>
+			<td>
+				<a href="https://youtu.be/9w1bqe3GVxs" target="_blank">Tips Mengatasi Anak yang Sering Berbicara Kasar/Kotor</a>
+			</td>
+		</tr>
+	</table>
+	<style>
+		table.center {
+      margin: auto;
+      border-collapse: collapse;
+      width: 80%;
+  }
+		table th, table td {
+			text-align: center;
+			padding: 8px;
+		}
+		th {
+			background-color:  #D9D7F1;
+		}
+		.tinggi {
+			background-color: #FDFFAB;
+		}
+		.rendah {
+			background-color: #FDFFAB;
+		}
+	</style>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hasil Kuisioner</title>
+</head>
+<body>
+    <h1>Hasil Kuisioner</h1>
+    {% if kategori %}
+        <p>Kategori Tantrum: {{ kategori }}</p>
+        <p>Solusi: {{ solusi }}</p>
+    {% else %}
+        <p>Silakan pilih salah satu kategori tantrum.</p>
+    {% endif %}
+</body>
+</html>

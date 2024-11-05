@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Tantrum Category Predictor</title>
+  </head>
+  <body>
+    <section id="checkbox">
+        <div class="checkbox-wrapper">
+    <h1>Tantrum Category Predictor</h1>
+	  <form action="/tantrum" method="POST" >
+		<section id="gejala">
+		  <p>Please select the symptoms your child exhibits:</p>
+		  <label><input type="checkbox" name="gejala[]" value="1"> Anak Anda Menangis dengan berteriak / menjerit dengan intensitas menangis 5-10 menit dalam sehari</label>
+		  <label><input type="checkbox" name="gejala[]" value="2"> Anak Anda Menangis dengan mengentakkan kaki dengan intensitas menangis 5-10 menit dalam sehari</label>
+		  <label><input type="checkbox" name="gejala[]" value="3"> Anak Anda Menangis dengan menjatuhkan diri ke lantai dengan intensitas meangis 5-10 menit dalam sehari</label>
+		  <label><input type="checkbox" name="gejala[]" value="4"> Anak Anda Menangis dengan menggapai lengan tangan atau lengan kaki orang tua dengan intensitas menangis 5-10 menit dalam sehari</label>
+		  <label><input type="checkbox" name="gejala[]" value="5"> Anak Anda Menangis dengan mendorong-dorong orang tua dengan intensitas menangis 5-10 menit dalam sehari</label>
+		  <label><input type="checkbox" name="gejala[]" value="6"> Anak Anda Menangis dengan menarik badan orang tua dengan intensitas menangis 5-10 menit dalam sehari</label>
+		  <label><input type="checkbox" name="gejala[]" value="7"> Anak Anda Menangis dengan berteriak / menjerit terjadi < 5x dalam seminggu</label>
+		  <label><input type="checkbox" name="gejala[]" value="8"> Anak Anda Menangis dengan menghentakkan kaki terjadi < 5x dalam seminggu</label>
+		  <label><input type="checkbox" name="gejala[]" value="9"> Anak Anda Menangis dengan menjatuhkan diri ke lantai terjadi < 5x dalam seminggu</label>
+		  <label><input type="checkbox" name="gejala[]" value="10"> Anak Anda Menangis dengan menggapai lengan kaki / lengan tangan terjadi < 5x dalam seminggu</label>
+		  <label><input type="checkbox" name="gejala[]" value="11"> Anak Anda Menangis dengan mendorong-dorong orang tua terjadi < 5x dalam seminggu</label>
+		  <label><input type="checkbox" name="gejala[]" value="12"> Anak Anda Menangis dengan menarik badan orang tua terjadi < 5x dalam seminggu</label>
+		  <label><input type="checkbox" name="gejala[]" value="13"> Anak Anda Menangis dengan melukai diri sendiri atau orang lain dengan intensitas menangis > 15 menit dalam sehari</label>
+		  <label><input type="checkbox" name="gejala[]" value="14"> Anak Anda Menangis dengan melempar barang dengan intensitas menangis > 15 menit dalam sehari</label>
+		  <label><input type="checkbox" name="gejala[]" value="15"> Anak Anda Menangis dengan megumpat atau berkata kasar dengan intensitas menangis > 15 menit dalam sehari</label>
+		  <label><input type="checkbox" name="gejala[]" value="16"> Anak Anda Menangis dengan tatapan marah dengan intensitas menangis > 15 menit dalam sehari</label>
+		  <label><input type="checkbox" name="gejala[]" value="17"> Anak Anda Menangis dengan melukai diri sendiri atau orang lain terjadi > 5x dalam seminggu</label>
+		  <label><input type="checkbox" name="gejala[]" value="18"> Anak Anda Menangis dengan melempar barang terjadi > 5x dalam seminggu</label>
+		  <label><input type="checkbox" name="gejala[]" value="19"> Anak Anda Menangis dengan mengumpat atau berkata kasar terjadi > 5x dalam seminggu</label>
+		  <label><input type="checkbox" name="gejala[]" value="20"> Anak Anda Menangis dengan tatapan marah terjadi > 5x dalam seminggu</label>
+		</section>
+		<section id="submit">
+		  <p><input type="submit" value="Predict Category"></p>
+          <a href="#"><span class="arrow"></span>Return To Homepage</a>
+		</section>
+	  </form>
+  </body>
+</html>
+<style>
+    #checkbox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+          
+    .checkbox-wrapper {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    .checkbox-wrapper h1 {
+        text-align: center;
+    }
+    #gejala {
+        margin: 20px 0;
+    }
+    #gejala label {
+        display: block;
+        margin-bottom: 10px;
+    }
+    #gejala input[type="checkbox"] {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 5px;
+    }
+          
+    #submit {
+        text-align: center;
+    }
+    #submit input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+          
+    #submit input[type="submit"]:hover {
+        background-color: #45a049;
+    }	  
+          
+     </style>
+</style>
+</section>

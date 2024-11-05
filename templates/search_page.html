@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="container">
+    <h4>Edukasi Tantrum</h4>
+    
+</div>
+<div class="container">
+     <div class="row">
+                {% for i in message %}
+                <div class="col s4">
+                  <div class="card medium">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <a href="https://www.youtube.com/watch?v={{i['id']}}" target="_blank"><img class="activator" width="200" height="250" src="{{i['video_image']}}"></a>
+                    </div>
+                    <div class="card-content">
+                      <span class="card-title activator black-text text-darken-5">{{i['video_title']}}<i class="material-icons right">more_vert</i></span>
+                       
+                    </div>
+                    <div class="card-reveal">
+                      <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                      <p>{{i['video_description']}}</p>
+                    </div>
+                  </div>
+                </div>
+                {% endfor %}
+            </div>
+            <a href="/"><span class="arrow">Return To Homepage</span></a>
+</div>
+<style>
+  .arrow {
+    position: center;
+    text-align: center;
+    padding-right: 10px;
+    background-color: #FFD1D1;
+    color: black;
+    style:bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+  }
+  
+  .arrow:before {
+    content: "\2190";
+    display: inline-block;
+    margin-right: 5px;
+    transform: translateY(-1px);
+  }
+ 
+</style>
+
+
+{% endblock %}

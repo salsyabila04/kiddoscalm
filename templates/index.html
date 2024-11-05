@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Deteksi Tantrum Balita</title>
+	<!---------------------CSS-------------------->
+	<link rel = "stylesheet" href = "https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+	<link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<!---------------------CSS-------------------->
+
+</head>
+<body>
+
+	<!---------------------HEADER-------------------->
+    <section id="nav-bar">
+        <nav class="navbar navbar-expand-lg navbar-light">
+			
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="fa fa-bars"></i>
+            </button>
+
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav  me-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link" href="#"></a>
+					</li>
+				</ul>
+
+				<ul class="navbar-nav">
+					<li class="nav-item">
+					  <a class="nav-link" href="#">HOME</a>
+					</li>
+						<ul class="navbar-nav">
+					<li class="nav-item">
+					  <a class="nav-link" href="#services">INFORMASI EDUKASI</a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link" href="#deployment">DETEKSI</a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link" href="#recommendation">REKOMENDASI</a>
+					</li>
+						</ul>
+				</ul>
+			</div>
+		</nav>
+	</section>
+	<!---------------------END HEADER-------------------->
+
+<style>
+*
+{
+	margin: 5;
+	padding: 5;
+}
+body
+{
+	font-family: Poppins, sans-serif;
+    margin:5; padding:5;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+
+}
+/*--------------HEADER---------------*/
+
+#nav-bar
+{
+	position: center;
+	top: 0;
+	z-index: 5;
+}
+.navbar
+{
+	background: #FFD4D4;
+	padding: 0 !important;
+	height:100px;
+}
+
+.navbar-nav li
+{
+	padding: 0 15px;
+}
+.navbar-nav li a{
+	color: rgb(211, 184, 94) !important;
+	font-weight: 1000;
+	font-size: 22px;
+	float: center;
+	text-align: center;
+}
+.fa-bars
+{
+	color: #1A120B;
+	font-size: 60px !important;
+}
+.imgban
+{
+	background-image: url(static/img/fam.jpg);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+#banner
+{
+	width: 100%;
+	background-size: 100%;
+}
+/*--------------END HEADER---------------*/
+.promo-tittle
+{
+	font-size: 60px;
+	font-weight: 600;
+	margin-top: 150px;
+	padding-bottom: 10px;
+}
+.row p{
+	padding-bottom: 20px;
+}
+.play-btn
+{
+	width: 45px;
+	margin: 20px;
+}
+#banner a
+{
+	color: #181D31;
+	text-decoration: none;
+}
+.bottom-img
+{
+	width: 100%;
+}
+
+/*--------------ADVANTAGE---------------*/
+#services
+{
+	background: #FEFBF6;
+	padding: 100px 0;
+}
+.services-img
+{
+	width: 400px;
+	margin-top: 20px;
+}
+.services
+{
+	padding: 50px;
+}
+.title::before
+{
+	content: '';
+	background: #FFD4D4;
+	height: 5px;
+	width: 200px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	transform: translateY(63px); 
+}
+#deployment
+{
+	padding:90px 0;
+}
+.services-img
+{
+	width: 100px;
+	margin-top: 20px;	
+	size: 100%;
+	background: #FFFBF5;																																				
+
+}
+.services
+{
+	padding: 50px;
+}
+
+
+
+.radio-nav 
+{ /* menghilangkan radio button */
+	display: none;
+}
+	
+	/* styling untuk tombol next dan previous slide */
+.nav-arrow 
+{
+	position: absolute;
+	top:45%;
+	width:50px;
+	height: 50px;
+}
+.nav-next
+{
+	right:10px;
+}
+.nav-prev
+{
+	left:10px;
+}
+.nav-arrow label 
+{
+	-webkit-transition:all 0.3s;
+	-moz-transition:all 0.3s;
+	transition:all 0.3s;
+	background-color: rgba(0,0,0,0.3);
+	color: #fff;
+	border-radius: 50%;
+	display: block;
+	position: absolute;
+	padding:15px 20px;
+	cursor: pointer;
+	z-index: 1;
+	opacity: 0;
+	font-weight: bold;
+	line-height: 1;
+}
+.container:hover .nav-arrow label
+{
+	background-color: rgba(0,0,0,0.7);
+}
+
+
+
+/*--------------CONTACT US---------------*/
+#contact-us
+{
+	margin: 100px auto;
+	width: 80%;
+	background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7) url(/static/img/makanan.jpg));
+	background-position: center;
+	background-size: cover;
+	border-radius: 10px;
+	text-align: center;
+	padding: 100px 0;
+
+}
+.contact-us h1
+{
+	color:#fff;
+	margin-bottom: 20px;
+
+}
+.bg-primary
+{
+	background-color: #000;
+}
+#deployment
+{
+	margin-top: 20px;
+	background: #FFD4D4;
+	padding: 10px 0;
+	
+}
+</style>
+
+<!--------------------------Isi Gambar pada Page-------------------------->
+<section id="banner">
+	<div class="container">
+		<div class="row">
+			<div class="col-12 col-md-8 titleban">
+				<p class="promo-tittle">Deteksi Tantrum Anak Balita</p>
+				<p>Tantrum pada anak dapat disebabkan oleh beberapa faktor, seperti terhalangnya keinginan anak untuk mendapatkan sesuatu, adanya kebutuhan yang tidak terpenuhi, misalnya sedang lapar, ketidakmampuan anak mengungkapkan sesuatu atau mengkomunikasikan diri dan keinginannya sehingga orang tua meresponnya tidak sesuai dengan keinginan anak.  </p>
+			</div>
+			<div class="col-6 col-md-4 imgban">
+				
+			</div>
+		</div>
+	</div>
+</section>
+<!--------------------------END Isi Gambar pada Page-------------------------->
+
+<!--------------------------Informasi-------------------------->
+<section id="services">
+	<div class="container text-center">
+	<h3 class="title">INFORMATION</h3>
+	<div class="row">
+	<div class="col-md-4 services">
+		<img src="/static/img/tantrum1.png" class="services-img">
+		<h4>Tantrum</h4>
+		<p>Tantrum adalah ledakan emosi yang kuat terjadi ketika anak merasa lepas kendali, ditandai dengan luapan emosi seperti menangis, berteriak, menjerit, membangkang, mengomel, marah-marah, menyakiti diri sendiri dan orang lain.</p>
+	</div>
+	<div class="col-md-4 services">
+		<img src="/static/img/kategori1.png" class="services-img"> 
+		<h4>Kategori Tantrum</h4>
+		<p>Kategori tantrum dibagi menjadi menurut Dr. Sears, yaitu tantrum rendah dan tantrum tinggi. Perilaku tantrum dapat terjadi karena anak ingin mendapatkan sesuatu dan perhatian dari keluarga atau lingkungan serta sebagai usaha untuk terkabulnya keinginan anak.</p>
+	</div>
+	<div class="col-md-4 services">
+		<img src="/static/img/strategi1.png" class="services-img"> 
+		<h4>Strategi Penanganan Tantrum</h4>
+		<p>Orang tua dapat berlatih strategi pengasuhan yang efektif sejak dini. Orang tua dapat belajar tentang kemarahan anak dan teknik yang efektif dalam menangani tantrum.</p>
+	</div>
+	</div>
+	</div>
+</section>
+<style>
+.services h4{
+	font-size: x-large;
+	text-align: center;
+	margin-top: 20;
+	margin-bottom: 20;
+}
+</style>
+<!--------------------------END ADVANTAGE-------------------------->
+
+
+<!--------------------------DEPLOYEMENT-------------------------->
+<section id="deployment">
+		<div class="container text-center">
+	<h3 class="title">Mulai Skrining Tantrum?</h3>
+
+    <header class="App-header">
+        <div classname="pre_img">
+          <span><img id="imagebox"></span>
+        </div>
+        <form>
+          <input id="imageinput" type="file" name="image" onchange="readUrl(this)">
+        </form>
+			<button name="send" id = "sendbutton" class="btn waves-effect waves-light">Send</button>
+	</header>
+</div>
+<style>
+.App-header {
+	margin-top: 50px;
+	margin-bottom: 50px;
+  	background-color: #FFD4D4;
+ 	min-height: 50vh;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	justify-content: center;
+  	font-size: calc(10px + 2vmin);
+  	color: rgb(14, 13, 13);
+}
+
+.pre_img{
+  height: 100px;
+  width: 100px;
+  /* background-color: white; */
+}
+
+input[type=file]{
+  background-color: rgb(240, 230, 176);
+  border: none;
+  color: #8d918d;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  margin: 40px 240px;
+  /* display: none; */
+
+}
+#pre{
+  background-color: #95b897; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 11px;
+  box-shadow: 0 8px 16px 0 rgba(61, 60, 60, 0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  margin: 10px 40px;
+}
+</style>
+</section>
+<!--------------------------KUISIONER------------------------------>
+
+	<h1>Kuisioner Pendukung Perilaku Kejadian Tantrum</h1>
+	<h2>NB:Pilihlah sesuai dengan beberapa ciri-ciri perilaku kejadian tantrum anak Anda</h2>
+	<form action="/tantrum" method="POST">
+	
+	<table class="center">
+		<col class="Kategori rendah">
+		<col class="Kategori tinggi">
+		<section id="gejala">
+		<tr>
+			<th> <input type="checkbox" class="form-check-input" name="gejala[]" value="1" id="check1"> 
+				<label class="form-check-label" for="check1">Kategori Tantrum Rendah</label>
+			</th>
+			<th><input type="checkbox" class="form-check-input" name="gejala[]" value="2" id="check2"> 
+				<label class="form-check-label" for="check2">Kategori Tantrum Tinggi</label>
+			</th>
+		</tr>
+		<section id="checkbox">
+			<div class="checkbox-wrapper">
+				<form action="/tantrum" method="POST">
+		<tr>
+			<td>
+				<a>Anak Anda Menangis dengan berteriak / menjerit dengan intensitas menangis 5-10 menit dalam sehari</a>
+				
+			</td>
+			<td> 
+				<a> Anak Anda Menangis dengan melukai diri sendiri atau orang lain dengan intensitas menangis > 15 menit dalam sehari</a>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<a> Anak Anda Menangis dengan mengentakkan kaki dengan intensitas menangis 5-10 menit dalam sehari</a>
+			</td>
+			<td>
+				<a>Anak Anda Menangis dengan melempar barang dengan intensitas menangis > 15 menit dalam sehari</a>
+				
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<a>Anak Anda Menangis dengan menjatuhkan diri ke lantai dengan intensitas meangis 5-10 menit dalam sehari</a>
+			</td>
+			<td>
+				<a> Anak Anda Menangis dengan megumpat atau berkata kasar dengan intensitas menangis > 15 menit dalam sehari</a>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<a> Anak Anda Menangis dengan menggapai lengan tangan atau lengan kaki orang tua dengan intensitas menangis 5-10 menit dalam sehari</a>
+			</td>
+			<td>
+				<a> Anak Anda Menangis dengan tatapan marah dengan intensitas menangis > 15 menit dalam sehari</a>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<a> Anak Anda Menangis dengan mendorong-dorong orang tua dengan intensitas menangis 5-10 menit dalam sehari</a>
+			</td>
+			<td>
+				<a> Anak Anda Menangis dengan melukai diri sendiri atau orang lain terjadi > 5x dalam seminggu</a>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<a>Anak Anda Menangis dengan menarik badan orang tua dengan intensitas menangis 5-10 menit dalam sehari</a>
+			</td>
+			<td>
+				<a> Anak Anda Menangis dengan melempar barang terjadi > 5x dalam seminggu</a>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<a>Anak Anda Menangis dengan berteriak / menjerit terjadi < 5x dalam seminggu</a>
+			</td>
+			<td>
+				<a> Anak Anda Menangis dengan mengumpat atau berkata kasar terjadi > 5x dalam seminggu</a>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<a> Anak Anda Menangis dengan menghentakkan kaki terjadi < 5x dalam seminggu</a>
+			</td>
+			<td>
+				<a> Anak Anda Menangis dengan tatapan marah terjadi > 5x dalam seminggu</a>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<a> Anak Anda Menangis dengan menjatuhkan diri ke lantai terjadi < 5x dalam seminggu</a>
+			</td>
+			<td>
+				<a></a>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<a> Anak Anda Menangis dengan menggapai lengan kaki / lengan tangan terjadi < 5x dalam seminggu</a>
+			</td>
+			<td>
+				<a></a>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<a> Anak Anda Menangis dengan mendorong-dorong orang tua terjadi < 5x dalam seminggu</a>
+			</td>
+			<td>
+				<a></a>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<a> Anak Anda Menangis dengan menarik badan orang tua terjadi < 5x dalam seminggu</a>
+			</td>
+			<td>
+				<a></a>
+			</td>
+		</tr>
+		
+	</table>
+	<section id="submit">
+		<input type="submit" value="Mulai Prediksi" class="btn waves-effect waves-light">
+
+	</section>
+	<style>
+		table.center {
+            margin: auto;
+            border-collapse: collapse;
+            width: 80%;
+        }
+		  
+		table th, table td {
+			padding: 8px;
+			text-align:center;
+			border-bottom: 1px solid #ddd;
+		  }
+		  
+		  tr:hover {
+			background-color: #f5f5f5;
+		  }
+		  
+		  .Kategori rendah{
+			text-align: left;
+			
+			background-color: #e8e8e8;
+		  }
+		  
+		  .Kategori tinggi{
+			text-align: left;
+			font-weight: bold;
+			background-color: #e8e8e8;
+		  }
+		  #submit {
+			text-align: center;
+			padding: 18px;
+		}
+		#submit input[type="submit"] {
+			background-color: #FFD1D1;
+			color: black;
+			style:bold;
+			padding: 12px 20px;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+			font-size: 12px;
+		}	  
+		#submit input[type="submit"]:hover {
+			background-color: #E5E0FF; 
+		}
+		h2 {
+			text-align: left;
+			font-size: 1.0em;
+			margin: 0 auto;
+			max-width: 50%;
+		  }
+		
+		 
+	</style>
+	    </div>
+	</section>
+</section>
+	
+
+<!---------------------------END KUISIONER-------------------------->
+
+<section id="recommendation">
+<div class="container">
+    
+</div>
+      
+		<style>
+			 .waves-effect.waves-light
+			 {
+				 background-color: #2f3640;
+				 color: #f5f6fa;
+				 font-family: "Roboto", sans-serif;
+			 } 
+			 .selectpicker {
+				color : #000;
+			 }
+		</style>
+	</section>
+
+
+	<section class="jumbotron text-center">
+		<div class="container">
+		  <h1 class="jumbotron-heading">Rekomendasi Edukasi Penanganan Tantrum</h1>
+		  <p class="lead text-muted">Tips dan Trik Mengatasi Tantrum Anak Balita</p>
+		  <form action="/search" method="POST">
+			<div class="form-group">
+			   <input type="text" class="form-control" name="search" placeholder="Keyword penanganan tantrum anak balita">
+			</div>
+			<div>
+			   <input type="submit" value="Search" class="btn waves-effect waves-light">
+			</div>
+		 </form>
+		 <title>My YouTube Video</title>
+    <style>
+      /* CSS styling for the H1 heading */
+      h1 {
+        font-size: 36px;
+        color: #333;
+        text-align: center;
+        margin-top: 50px;
+      }
+    </style>
+  
+<html>
+<body>
+	<h1>Rekomendasi Pilihan Video Edukasi Tantrum</h1>
+	<table>
+		<col class="rendah">
+		<col class="tinggi">
+		<tr>
+			<th>Tantrum Rendah</th>
+			<th>Tantrum Tinggi</th>
+		</tr>
+		<tr>
+			<td>
+				<a href="https://www.youtube.com/watch?v=hpTtDRbRbz4" target="_blank">Tantrum Pada Anak</a>
+				
+			</td>
+			<td> 
+				<a href="https://youtu.be/rayzL6qsZ6k" target="_blank">Anak Tantrum Membenturkan Kepala, Apa Yang Harus Dilakukan</a>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="https://youtu.be/YYg9Sb7HSTE" target="_blank">Melatih Emosi Anak 2-3 Tahun Saat Keinginan Tak Dituruti</a>
+			</td>
+			<td>
+				<a href="https://youtu.be/Y7Q6SdnAEkU" target="_blank">Cara Mengatasi Anak yang Marah dan Memukul Jika di Tegur </a>
+				
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="https://youtu.be/BRUH2RhTjJk" target="_blank">PARENTING : Tips Mengatasi Tantrum Pada Anak Balita usia 1-5 tahun</a>
+			</td>
+			<td>
+				<a href="https://youtu.be/Vx6oWn09tNU" target="_blank">Cara Menangani Anak yang Suka Tantrum/ Melempar Barang</a>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="https://youtu.be/gRQCyQxj9Jg" target="_blank">Melatih Anak Mengelola Emosi</a>
+			</td>
+			<td>
+				<a href="https://youtu.be/9w1bqe3GVxs" target="_blank">Tips Mengatasi Anak yang Sering Berbicara Kasar/Kotor</a>
+			</td>
+		</tr>
+	</table>
+	<style>
+		table {
+			border-collapse: collapse;
+			width: 100%;
+		}
+		th, td {
+			text-align: center;
+			padding: 8px;
+		}
+		th {
+			background-color:  #FFD4D4;
+		}
+		.tinggi {
+			background-color: #ccffcc;
+		}
+		.rendah {
+			background-color: #ccffcc;
+		}
+	</style>
+		<style>
+			.jumbotron {
+				padding-top: 3rem;
+				padding-bottom: 3rem;
+				margin-bottom: 0;
+				background-color: #fff;
+			  }
+			  @media (min-width: 768px) {
+				.jumbotron {
+				  padding-top: 6rem;
+				  padding-bottom: 6rem;
+				}
+			  }
+			  
+			  .jumbotron p:last-child {
+				margin-bottom: 0;
+			  }
+			  
+		</style>
+	  </section>
+	
+	    </div>
+	
+<!--------------------------END DEPLOYEMENT-------------------------->
+
+<!--------------------------SOCIAL MEDIA-------------------------->
+<section id="closing">
+	<div class="container text-center">
+		<h3><b>WORDS FROM AUTHOR</b></h3>
+		<img src="static/img/Buku.png" class="words-img">
+		<p><i>"Didiklah anakmu, karena sesungguhnya akan dimintai pertanggungjawaban mengenai pendidikan dan pengajaran yang telah engkau berikan kepadanya, dan dia juga akan ditanya megenai kebaikan dirimu kepadanya serta ketaatannya kepada dirimu"</i><br>- Tuhfah al Maudud hal.123 -</p>
+	</div>
+<style>
+.text-center h3 b
+{
+margin-top: 50px;
+}
+#social-media
+{
+	background: #f8f9fa;
+	padding: 300px 0;
+}
+#closing
+{
+	margin-top: 35px;
+	background: #f8f9fa;
+	padding: 100px 0;
+}
+.words-img{
+	width: 100px;
+	margin-bottom: 20px;
+}
+.text-center h3{
+	font-size: xx-large;
+	font-weight: 600;
+	margin-top: 200;
+	margin-bottom: 30px;
+	text-align: center;
+}
+.text-center p{
+	margin-top: 15;
+	margin-bottom: 50px;
+	text-align: center;
+}
+.social-icons img
+{
+	width: 60px;
+	transition: 0.5s;
+}
+.social-icons a:hover img
+{
+	transform: translateY(-10px);
+}
+</style>
+</section>
+<!--------------------------END SOCIAL MEDIA-------------------------->
+
+
+<!--------------------------FOOTER-------------------------->
+<section id="footer">
+	<img src="/static/img/wave2.png" class="footer-img">
+<div class="container">
+	<div class="row">
+		<div class="col-md-4 footer-box">
+			<p>Sistem deteksi objek tantrum akan membantu orang tua atau guru mengenai skrining tantrum yang dilengkapi dengan kuisioner pendukung indikator kejadian tantrum serta edukasi penanganan tantrum anak balita</p>
+			<div class="social-icons">
+                <i class="fa-brands fa-facebook-square"></i>
+				<i class="fa-brands fa-twitter-square"></i>
+				<i class="fa-brands fa-instagram-square"></i>
+				<i class="fa-brands fa-linkedin"></i>
+			</div>
+		</div>
+		<div class="col-md-4 footer-box">
+			<div class="satu">
+				<h3><b>SOME LINKS</b></h3>
+				<a href="#"> F A Q </a>
+				<a href="#"> Blog</a>
+				<a href="#"> Terms of Services</a>
+			</div>
+		</div>
+		<div class="col-md-4 footer-box">
+			<p> SISTEM DETEKSI TANTRUM ANAK BALITA </p>
+			<p>Salsyabila Vidia Nur Afni</p>
+			<p> copyright©2023</p>
+		</div>
+	</div>
+</div>
+<style>
+#footer
+{
+	background:  #FFD4D4;	
+	color: rgb(211, 184, 94);
+}
+.footer-img
+{
+	width: 100%;
+}
+.footer-box
+{
+	padding: 10px;
+	text-align: justify;
+}
+.footer-box img
+{
+	width: 75px;
+	margin-bottom: 20px;
+}
+.social-icons i{
+	font-size: 30px;
+    margin: 25px;
+    cursor: pointer;
+}
+.footer-box h3{
+	font-size: x-large;
+	margin-bottom: 40px;
+	letter-spacing: 1px;
+	text-align: center;
+}
+.footer-box p{
+	display: block;
+    text-decoration: none;
+    margin-bottom: 1px;
+}
+.satu a{
+	text-align: center;
+	margin-bottom: 15px;
+	display: block;
+    text-decoration: none;
+	color: rgb(211, 184, 94);
+}
+</style>
+
+</section>
+<!--------------------------END FOOTER-------------------------->
+
+<!----------------------JAVASCRIPT-------------------------->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	crossorigin="anonymous"></script>
+	<script type="text/javascript" src="../static/index.js"></script>
+	<!----------------------END JAVASCRIPT-------------------------->
+
+</body>
+</html>
