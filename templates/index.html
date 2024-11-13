@@ -14,45 +14,60 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="https://fonts.cdnfonts.com/css/playfull-2" rel="stylesheet">
+	<link href=" https://fonts.cdnfonts.com/css/bagel-fat-one " rel="stylesheet">
+	<link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico')}}">
 	<!---------------------CSS-------------------->
 
 </head>
 <body>
 
 	<!---------------------HEADER-------------------->
-    <section id="nav-bar">
-        <nav class="navbar navbar-expand-lg navbar-light">
-			
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <i class="fa fa-bars"></i>
-            </button>
+<section id="nav-bar">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <!-- Toggler for mobile view -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa fa-bars"></i>
+        </button>
 
-			<div class="collapse navbar-collapse" id="navbarNav">
-				<ul class="navbar-nav  me-auto mb-2 mb-lg-0">
-					<li class="nav-item">
-						<a class="nav-link" href="#"></a>
-					</li>
-				</ul>
+        <!-- Navbar content -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <!-- Logo: CALM KIDDOS -->
+            <a class="navbar-brand" href="#">
+                <span class="logo-text">
+                    <span class="letter">C</span>
+                    <span class="letter">a</span>
+                    <span class="letter">l</span>
+                    <span class="letter">m</span>
+                    <span class="letter"> </span>
+                    <span class="letter">K</span>
+                    <span class="letter">i</span>
+                    <span class="letter">d</span>
+                    <span class="letter">d</span>
+                    <span class="letter">o</span>
+                    <span class="letter">s</span>
+                </span>
+            </a>
 
-				<ul class="navbar-nav">
-					<li class="nav-item">
-					  <a class="nav-link" href="#">HOME</a>
-					</li>
-						<ul class="navbar-nav">
-					<li class="nav-item">
-					  <a class="nav-link" href="#services">INFORMASI EDUKASI</a>
-					</li>
-					<li class="nav-item">
-					  <a class="nav-link" href="#deployment">DETEKSI</a>
-					</li>
-					<li class="nav-item">
-					  <a class="nav-link" href="#recommendation">REKOMENDASI</a>
-					</li>
-						</ul>
-				</ul>
-			</div>
-		</nav>
-	</section>
+            <!-- Navbar links -->
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">INFORMASI EDUKASI</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#deployment">DETEKSI</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#recommendation">REKOMENDASI</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</section>
+
 	<!---------------------END HEADER-------------------->
 
 <style>
@@ -61,6 +76,7 @@
 	margin: 5;
 	padding: 5;
 }
+
 body
 {
 	font-family: Poppins, sans-serif;
@@ -68,36 +84,153 @@ body
     box-sizing: border-box;
     outline: none; border:none;
     text-decoration: none;
-    text-transform: capitalize;
     transition: .2s linear;
 
 }
 /*--------------HEADER---------------*/
-
-#nav-bar
-{
-	position: center;
-	top: 0;
-	z-index: 5;
-}
-.navbar
-{
-	background: #FFD4D4;
-	padding: 0 !important;
-	height:100px;
+/* General styling */
+/* Styling for the navbar links */
+.navbar-nav .nav-item .nav-link {
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and transform */
 }
 
-.navbar-nav li
-{
-	padding: 0 15px;
+/* Hover effect for navbar links */
+.navbar-nav .nav-item .nav-link:hover {
+    color: #FF4081; /* Change color to pink on hover */
+    transform: scale(1.1); /* Slightly increase the size on hover */
 }
-.navbar-nav li a{
-	color: rgb(211, 184, 94) !important;
-	font-weight: 1000;
-	font-size: 22px;
-	float: center;
-	text-align: center;
+
+/* Active link state */
+.navbar-nav .nav-item .nav-link.active {
+    color: #FF4081; /* Same hover color for active links */
+    border-bottom: 2px solid #FF4081; /* Add a border at the bottom for active link */
 }
+
+#nav-bar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    width: 100%;
+}
+
+/* Navbar links centered */
+.navbar-nav {
+    display: flex;
+    justify-content: center;  /* Centers the nav items horizontally */
+    align-items: center;      /* Centers the nav items vertically */
+    margin: 0;
+}
+
+.navbar-nav .nav-item {
+    margin: 0 15px; /* space between items */
+}
+
+.a .nav-link { 
+    text-color: #db5f31;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for nav links */
+.navbar-nav .nav-link:hover {
+    color: #e91e63; /* Pastel pink accent color */
+}
+
+/* Active state for navbar links */
+.navbar-nav .nav-link.active {
+    color: #e91e63;
+    border-bottom: 2px solid #e91e63;
+}
+
+/* Styling for the logo text */
+.logo-text {
+	font-family : 'Bagel Fat One' , sans-serif ;                                           
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    display: inline-flex;
+}
+
+/* Styling for each letter of the logo */
+.letter:nth-child(1) {
+    color: #085e9d;
+}
+
+.letter:nth-child(2) {
+    color: #cc3845;
+}
+
+.letter:nth-child(3) {
+    color: #f3b939;
+}
+
+.letter:nth-child(4) {
+    color: #db5f31;
+}
+
+.letter:nth-child(5) {
+    color: #FFFFFF;
+}
+
+.letter:nth-child(6) {
+    color: #0097b2;
+}
+
+.letter:nth-child(7) {
+    color: #dca0a0;
+}
+
+.letter:nth-child(8) {
+    color: #085e9d; 
+}
+
+.letter:nth-child(9) {
+    color: #8c52ff; 
+}
+
+.letter:nth-child(10) {
+    color: #2da43e;  
+}
+
+.letter:nth-child(11) {
+    color: #f3b939;  
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;  /* Stack the items vertically on smaller screens */
+        width: 100%;
+        align-items: center;
+    }
+
+    .navbar-nav .nav-item {
+        margin: 10px 0; /* space between items on mobile */
+    }
+
+    .navbar .navbar-toggler {
+        font-size: 28px;
+    }
+}
+
 .fa-bars
 {
 	color: #1A120B;
@@ -183,9 +316,6 @@ body
 {
 	padding: 50px;
 }
-
-
-
 .radio-nav 
 { /* menghilangkan radio button */
 	display: none;
@@ -281,44 +411,122 @@ body
 
 <!--------------------------Informasi-------------------------->
 <section id="services">
-	<div class="container text-center">
-	<h3 class="title">INFORMATION</h3>
-	<div class="row">
-	<div class="col-md-4 services">
-		<img src="/static/img/tantrum1.png" class="services-img">
-		<h4>Tantrum</h4>
-		<p>Tantrum adalah ledakan emosi yang kuat terjadi ketika anak merasa lepas kendali, ditandai dengan luapan emosi seperti menangis, berteriak, menjerit, membangkang, mengomel, marah-marah, menyakiti diri sendiri dan orang lain.</p>
-	</div>
-	<div class="col-md-4 services">
-		<img src="/static/img/kategori1.png" class="services-img"> 
-		<h4>Kategori Tantrum</h4>
-		<p>Kategori tantrum dibagi menjadi menurut Dr. Sears, yaitu tantrum rendah dan tantrum tinggi. Perilaku tantrum dapat terjadi karena anak ingin mendapatkan sesuatu dan perhatian dari keluarga atau lingkungan serta sebagai usaha untuk terkabulnya keinginan anak.</p>
-	</div>
-	<div class="col-md-4 services">
-		<img src="/static/img/strategi1.png" class="services-img"> 
-		<h4>Strategi Penanganan Tantrum</h4>
-		<p>Orang tua dapat berlatih strategi pengasuhan yang efektif sejak dini. Orang tua dapat belajar tentang kemarahan anak dan teknik yang efektif dalam menangani tantrum.</p>
-	</div>
-	</div>
-	</div>
+  <div class="container text-center">
+    <h3 class="title">INFORMATION</h3>
+    <div class="row">
+      <div class="col-md-4 services">
+        <div class="service-box">
+          <img src="/static/img/tantrum1.png" class="services-img">
+          <h4>Tantrum</h4>
+          <p>Tantrum adalah ledakan emosi yang kuat terjadi ketika anak merasa lepas kendali, ditandai dengan luapan emosi seperti menangis, berteriak, menjerit, membangkang, mengomel, marah-marah, menyakiti diri sendiri dan orang lain.</p>
+        </div>
+      </div>
+      <div class="col-md-4 services">
+        <div class="service-box">
+          <img src="/static/img/kategori1.png" class="services-img">
+          <h4>Kategori Tantrum</h4>
+          <p>Kategori tantrum dibagi menjadi menurut Dr. Sears, yaitu tantrum rendah dan tantrum tinggi. Perilaku tantrum dapat terjadi karena anak ingin mendapatkan sesuatu dan perhatian dari keluarga atau lingkungan serta sebagai usaha untuk terkabulnya keinginan anak.</p>
+        </div>
+      </div>
+      <div class="col-md-4 services">
+        <div class="service-box">
+          <img src="/static/img/strategi1.png" class="services-img">
+          <h4>Strategi Penanganan Tantrum</h4>
+          <p>Orang tua dapat berlatih strategi pengasuhan yang efektif sejak dini. Orang tua dapat belajar tentang kemarahan anak dan teknik yang efektif dalam menangani tantrum.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
+
 <style>
+  .service-box {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
 .services h4{
 	font-size: x-large;
 	text-align: center;
 	margin-top: 20;
 	margin-bottom: 20;
 }
+
+/* General container and title styling */
+#services {
+    padding: 50px 0;
+    background-color: #f9f9f9; /* Light background color for the section */
+}
+
+.title {
+    font-family: 'Le Petit Cochon', sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+/* Services container */
+.services {
+    background-color: #f0f0f0;  /* Light pastel background color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 30px;  /* Add space below each service box */
+}
+
+/* Service image styling */
+.services-img {
+    width: 80%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Service header styling */
+.services h4 {
+    font-family: 'Le Petit Cochon', sans-serif;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+/* Service paragraph styling */
+.services p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Hover effect for services */
+.services:hover {
+    transform: translateY(-10px); /* Slightly lift the box on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* More pronounced shadow */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .services {
+        margin-bottom: 20px; /* Reduce space between items on small screens */
+    }
+}
+
+
+
 </style>
 <!--------------------------END ADVANTAGE-------------------------->
 
 
 <!--------------------------DEPLOYEMENT-------------------------->
 <section id="deployment">
-		<div class="container text-center">
-	<h3 class="title">Mulai Skrining Tantrum?</h3>
-
-    <header class="App-header">
+	<div class="container text-center">
+		<h3 class="title">Mulai Skrining Tantrum?</h3>
+    	<header class="App-header">
         <div classname="pre_img">
           <span><img id="imagebox"></span>
         </div>
@@ -326,55 +534,93 @@ body
           <input id="imageinput" type="file" name="image" onchange="readUrl(this)">
         </form>
 			<button name="send" id = "sendbutton" class="btn waves-effect waves-light">Send</button>
-	</header>
-</div>
+		</header>
+	</div>
 <style>
+/* Styling header utama */
+#deployment {
+    margin-top: 10px;
+    background: #f8f9fa;
+    padding: 10px 0;
+}
 .App-header {
-	margin-top: 50px;
-	margin-bottom: 50px;
-  	background-color: #FFD4D4;
- 	min-height: 50vh;
-  	display: flex;
-  	flex-direction: column;
-  	align-items: center;
-  	justify-content: center;
-  	font-size: calc(10px + 2vmin);
-  	color: rgb(14, 13, 13);
+    max-width: 1000px;
+    margin-top: 20px;
+    background-color: #ffdede;
+    padding: 14px;
+    border-radius: 29px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 19px;
 }
 
-.pre_img{
+/* Styling untuk tampilan gambar */
+.pre_img {
   height: 100px;
   width: 100px;
-  /* background-color: white; */
+  border: 2px dashed #FFB6A6; /* Warna pastel peach */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFFFFF;
+  overflow: hidden;
+  transition: border-color 0.3s;
 }
 
-input[type=file]{
-  background-color: rgb(240, 230, 176);
-  border: none;
-  color: #8d918d;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 15px;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-  margin: 40px 240px;
-  /* display: none; */
-
+.pre_img:hover {
+  border-color: #FFA07A; /* Warna pastel orange */
 }
-#pre{
-  background-color: #95b897; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
+
+/* Styling untuk input file */
+input[type=file] {
+  background-color: #FFF2CC; /* Warna pastel kuning */
+  color: #707070;
+  padding: 10px 20px;
+  font-size: 0.85rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.2s;
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 11px;
-  box-shadow: 0 8px 16px 0 rgba(61, 60, 60, 0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-  margin: 10px 40px;
+}
+
+input[type=file]:hover {
+  background-color: #FFECB3; /* Warna pastel kuning muda */
+  transform: scale(1.05);
+}
+
+/* Styling untuk tombol send */
+#sendbutton {
+  background-color: #ccffcc; /* Warna pastel biru */
+  color: black;
+  padding: 8px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+#sendbutton:hover {
+  background-color: #d8f2d8; /* Warna pastel biru tua */
+  transform: scale(1.05);
+}
+
+.title {
+  color: #333; /* Darker text for title */
+  margin-bottom: 20px; /* Space below title */
+}
+
+.pre_img img {
+  max-width: 100%; /* Responsive image */
+  border-radius: 50%; /* Circular image */
 }
 </style>
+
 </section>
 <!--------------------------KUISIONER------------------------------>
 
@@ -382,188 +628,235 @@ input[type=file]{
 	<h2>NB:Pilihlah sesuai dengan beberapa ciri-ciri perilaku kejadian tantrum anak Anda</h2>
 	<form action="/tantrum" method="POST">
 	
-	<table class="center">
-		<col class="Kategori rendah">
-		<col class="Kategori tinggi">
-		<section id="gejala">
-		<tr>
-			<th> <input type="checkbox" class="form-check-input" name="gejala[]" value="1" id="check1"> 
-				<label class="form-check-label" for="check1">Kategori Tantrum Rendah</label>
-			</th>
-			<th><input type="checkbox" class="form-check-input" name="gejala[]" value="2" id="check2"> 
-				<label class="form-check-label" for="check2">Kategori Tantrum Tinggi</label>
-			</th>
-		</tr>
-		<section id="checkbox">
-			<div class="checkbox-wrapper">
-				<form action="/tantrum" method="POST">
-		<tr>
-			<td>
-				<a>Anak Anda Menangis dengan berteriak / menjerit dengan intensitas menangis 5-10 menit dalam sehari</a>
-				
-			</td>
-			<td> 
-				<a> Anak Anda Menangis dengan melukai diri sendiri atau orang lain dengan intensitas menangis > 15 menit dalam sehari</a>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<a> Anak Anda Menangis dengan mengentakkan kaki dengan intensitas menangis 5-10 menit dalam sehari</a>
-			</td>
-			<td>
-				<a>Anak Anda Menangis dengan melempar barang dengan intensitas menangis > 15 menit dalam sehari</a>
-				
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<a>Anak Anda Menangis dengan menjatuhkan diri ke lantai dengan intensitas meangis 5-10 menit dalam sehari</a>
-			</td>
-			<td>
-				<a> Anak Anda Menangis dengan megumpat atau berkata kasar dengan intensitas menangis > 15 menit dalam sehari</a>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<a> Anak Anda Menangis dengan menggapai lengan tangan atau lengan kaki orang tua dengan intensitas menangis 5-10 menit dalam sehari</a>
-			</td>
-			<td>
-				<a> Anak Anda Menangis dengan tatapan marah dengan intensitas menangis > 15 menit dalam sehari</a>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<a> Anak Anda Menangis dengan mendorong-dorong orang tua dengan intensitas menangis 5-10 menit dalam sehari</a>
-			</td>
-			<td>
-				<a> Anak Anda Menangis dengan melukai diri sendiri atau orang lain terjadi > 5x dalam seminggu</a>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<a>Anak Anda Menangis dengan menarik badan orang tua dengan intensitas menangis 5-10 menit dalam sehari</a>
-			</td>
-			<td>
-				<a> Anak Anda Menangis dengan melempar barang terjadi > 5x dalam seminggu</a>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<a>Anak Anda Menangis dengan berteriak / menjerit terjadi < 5x dalam seminggu</a>
-			</td>
-			<td>
-				<a> Anak Anda Menangis dengan mengumpat atau berkata kasar terjadi > 5x dalam seminggu</a>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<a> Anak Anda Menangis dengan menghentakkan kaki terjadi < 5x dalam seminggu</a>
-			</td>
-			<td>
-				<a> Anak Anda Menangis dengan tatapan marah terjadi > 5x dalam seminggu</a>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<a> Anak Anda Menangis dengan menjatuhkan diri ke lantai terjadi < 5x dalam seminggu</a>
-			</td>
-			<td>
-				<a></a>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<a> Anak Anda Menangis dengan menggapai lengan kaki / lengan tangan terjadi < 5x dalam seminggu</a>
-			</td>
-			<td>
-				<a></a>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<a> Anak Anda Menangis dengan mendorong-dorong orang tua terjadi < 5x dalam seminggu</a>
-			</td>
-			<td>
-				<a></a>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<a> Anak Anda Menangis dengan menarik badan orang tua terjadi < 5x dalam seminggu</a>
-			</td>
-			<td>
-				<a></a>
-			</td>
-		</tr>
-		
-	</table>
-	<section id="submit">
-		<input type="submit" value="Mulai Prediksi" class="btn waves-effect waves-light">
+    <table class="center">
+        <col class="Kategori rendah">
+        <col class="Kategori tinggi">
 
-	</section>
-	<style>
-		table.center {
-            margin: auto;
-            border-collapse: collapse;
-            width: 80%;
-        }
-		  
-		table th, table td {
-			padding: 8px;
-			text-align:center;
-			border-bottom: 1px solid #ddd;
+        <section id="gejala">
+            <tr>
+                <th>
+                    <input type="checkbox" class="form-check-input" name="gejala[]" value="1" id="check1">
+                    <label class="form-check-label" for="check1">Kategori Tantrum Rendah</label>
+                </th>
+                <th>
+                    <input type="checkbox" class="form-check-input" name="gejala[]" value="2" id="check2">
+                    <label class="form-check-label" for="check2">Kategori Tantrum Tinggi</label>
+                </th>
+            </tr>
+            <section id="checkbox">
+                <div class="checkbox-wrapper">
+                    <form action="/tantrum" method="POST">
+                        <tr>
+                            <td class="Kategori-rendah">
+                                <a>Anak Anda Menangis dengan berteriak / menjerit dengan intensitas menangis 5-10 menit dalam sehari</a>
+                            </td>
+                            <td class="Kategori-tinggi">
+                                <a> Anak Anda Menangis dengan melukai diri sendiri atau orang lain dengan intensitas menangis > 15 menit dalam sehari</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="Kategori-rendah">
+                                <a> Anak Anda Menangis dengan mengentakkan kaki dengan intensitas menangis 5-10 menit dalam sehari</a>
+                            </td>
+                            <td class="Kategori-tinggi">
+                                <a>Anak Anda Menangis dengan melempar barang dengan intensitas menangis > 15 menit dalam sehari</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="Kategori-rendah">
+                                <a>Anak Anda Menangis dengan menjatuhkan diri ke lantai dengan intensitas menangis 5-10 menit dalam sehari</a>
+                            </td>
+                            <td class="Kategori-tinggi">
+                                <a> Anak Anda Menangis dengan mengumpat atau berkata kasar dengan intensitas menangis > 15 menit dalam sehari</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="Kategori-rendah">
+                                <a> Anak Anda Menangis dengan menggapai lengan tangan atau lengan kaki orang tua dengan intensitas menangis 5-10 menit dalam sehari</a>
+                            </td>
+                            <td class="Kategori-tinggi">
+                                <a> Anak Anda Menangis dengan tatapan marah dengan intensitas menangis > 15 menit dalam sehari</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="Kategori-rendah">
+                                <a> Anak Anda Menangis dengan mendorong-dorong orang tua dengan intensitas menangis 5-10 menit dalam sehari</a>
+                            </td>
+                            <td class="Kategori-tinggi">
+                                <a> Anak Anda Menangis dengan melukai diri sendiri atau orang lain terjadi > 5x dalam seminggu</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="Kategori-rendah">
+                                <a>Anak Anda Menangis dengan menarik badan orang tua dengan intensitas menangis 5-10 menit dalam sehari</a>
+                            </td>
+                            <td class="Kategori-tinggi">
+                                <a> Anak Anda Menangis dengan melempar barang terjadi > 5x dalam seminggu</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="Kategori-rendah">
+                                <a>Anak Anda Menangis dengan berteriak / menjerit terjadi < 5x dalam seminggu</a>
+                            </td>
+                            <td class="Kategori-tinggi">
+                                <a> Anak Anda Menangis dengan mengumpat atau berkata kasar terjadi > 5x dalam seminggu</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="Kategori-rendah">
+                                <a> Anak Anda Menangis dengan menghentakkan kaki terjadi < 5x dalam seminggu</a>
+                            </td>
+                            <td class="Kategori-tinggi">
+                                <a> Anak Anda Menangis dengan tatapan marah terjadi > 5x dalam seminggu</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="Kategori-rendah">
+                                <a> Anak Anda Menangis dengan menjatuhkan diri ke lantai terjadi < 5x dalam seminggu</a>
+                            </td>
+                            <td class="Kategori-tinggi">
+                                <a></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="Kategori-rendah">
+                                <a> Anak Anda Menangis dengan menggapai lengan kaki / lengan tangan terjadi < 5x dalam seminggu</a>
+                            </td>
+                            <td class="Kategori-tinggi">
+                                <a></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="Kategori-rendah">
+                                <a> Anak Anda Menangis dengan mendorong-dorong orang tua terjadi < 5x dalam seminggu</a>
+                            </td>
+                            <td class="Kategori-tinggi">
+                                <a></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="Kategori-rendah">
+                                <a> Anak Anda Menangis dengan menarik badan orang tua terjadi < 5x dalam seminggu</a>
+                            </td>
+                            <td class="Kategori-tinggi">
+                                <a></a>
+                            </td>
+                        </tr>
+                    </form>
+                </div>
+    </table>
+        <section id="submit">
+            <input type="submit" value="Mulai Prediksi" class="btn waves-effect waves-light">
+        </section>
+<style>
+/* Table styling */
+.center {
+    width: 80%; /* Set a fixed width for the table */
+    margin: 20px auto; /* Center the table horizontally */
+    border-collapse: collapse;
+    border-radius: 10px; /* Add rounded corners */
+    overflow: hidden; /* Ensure rounded corners are visible */
+    background-color: #fff; /* White background for the table */
+    padding: 20px; /* Add padding around the table */
+}
+
+/* Header row styling */
+.center th {
+    padding: 15px;
+    text-align: center;
+    background-color: #FFF2CC; /* Light yellow for header */
+    color: #333;
+	border: 1px #d9d9d9;
+    font-family: 'Arial', sans-serif; /* Fun and clean font */
+    font-size: 1.1em;
+}
+
+/* Column styling for Tantrum Rendah */
+.center td.Kategori-rendah {
+    background-color: #e0f7fa; /* Soft blue pastel for Tantrum Rendah */
+    padding: 12px;
+    text-align: left;
+    border-radius: 5px;
+    font-family: 'Arial', sans-serif; /* Fun font for content */
+    transition: background-color 0.3s ease;
+}
+
+/* Column styling for Tantrum Tinggi */
+.center td.Kategori-tinggi {
+    background-color: #f8bbd0; /* Soft pink pastel for Tantrum Tinggi */
+    padding: 12px;
+    text-align: left;
+    
+    border-radius: 5px;
+    font-family: 'Arial', sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+/* Alternate row colors for better readability */
+.center tr:nth-child(even) {
+    background-color: #f9f9f9; /* Light gray background for even rows */
+}
+
+/* Row hover effect */
+.center tr:hover {
+    background-color: #ffebcd; /* Light peach hover background */
+    cursor: pointer;
+}
+
+
+/* Style for the checkboxes */
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Style for labels */
+.form-check-label {
+    font-size: 1em;
+    color: #333;
+}
+
+/* Style for the submit button */
+#submit input[type="submit"] {
+    background-color: #ccffcc; /* Fun orange button */
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#submit input[type="submit"]:hover {
+    background-color: #d8f2d8; /* Darker orange on hover */
+}
+
+/* Add spacing between the form elements */
+#submit {
+    text-align: center;
+    margin-top: 20px;
+}
+
+h2 {
+	text-align: left;
+	font-size: 1.0em;
+	margin: 10px auto;
+	max-width: 50%;
 		  }
-		  
-		  tr:hover {
-			background-color: #f5f5f5;
-		  }
-		  
-		  .Kategori rendah{
-			text-align: left;
-			
-			background-color: #e8e8e8;
-		  }
-		  
-		  .Kategori tinggi{
-			text-align: left;
-			font-weight: bold;
-			background-color: #e8e8e8;
-		  }
-		  #submit {
-			text-align: center;
-			padding: 18px;
-		}
-		#submit input[type="submit"] {
-			background-color: #FFD1D1;
-			color: black;
-			style:bold;
-			padding: 12px 20px;
-			border: none;
-			border-radius: 4px;
-			cursor: pointer;
-			font-size: 12px;
-		}	  
-		#submit input[type="submit"]:hover {
-			background-color: #E5E0FF; 
-		}
-		h2 {
-			text-align: left;
-			font-size: 1.0em;
-			margin: 0 auto;
-			max-width: 50%;
-		  }
-		
-		 
-	</style>
+
+
+</style>
 	    </div>
 	</section>
-</section>
 	
 
 <!---------------------------END KUISIONER-------------------------->
 
 <section id="recommendation">
 <div class="container">
+	<form action="/index/recommend" method="POST">
     
 </div>
       
@@ -578,22 +871,9 @@ input[type=file]{
 				color : #000;
 			 }
 		</style>
-	</section>
-
 
 	<section class="jumbotron text-center">
-		<div class="container">
-		  <h1 class="jumbotron-heading">Rekomendasi Edukasi Penanganan Tantrum</h1>
-		  <p class="lead text-muted">Tips dan Trik Mengatasi Tantrum Anak Balita</p>
-		  <form action="/search" method="POST">
-			<div class="form-group">
-			   <input type="text" class="form-control" name="search" placeholder="Keyword penanganan tantrum anak balita">
-			</div>
-			<div>
-			   <input type="submit" value="Search" class="btn waves-effect waves-light">
-			</div>
-		 </form>
-		 <title>My YouTube Video</title>
+		
     <style>
       /* CSS styling for the H1 heading */
       h1 {
@@ -687,10 +967,9 @@ input[type=file]{
 			  }
 			  
 		</style>
+	</div>
 	  </section>
-	
-	    </div>
-	
+	</section>
 <!--------------------------END DEPLOYEMENT-------------------------->
 
 <!--------------------------SOCIAL MEDIA-------------------------->
