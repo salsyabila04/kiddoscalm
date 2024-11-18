@@ -29,26 +29,25 @@
 <section id="nav-bar">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <!-- Toggler for mobile view -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fa fa-bars"></i>
+        <button class = "navbar-toggler" type="button" data-toggle = "collapse" data-target ="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle naviagtion">
+            <span class="fa fa-bars"></span>
         </button>
-
         <!-- Navbar content -->
         <div class="collapse navbar-collapse" id="navbarNav">
             <!-- Logo: CALM KIDDOS -->
             <a class="navbar-brand" href="#">
                 <span class="logo-text">
-                    <span class="letter">C</span>
-                    <span class="letter">a</span>
-                    <span class="letter">l</span>
-                    <span class="letter">m</span>
-                    <span class="letter"> </span>
                     <span class="letter">K</span>
                     <span class="letter">i</span>
                     <span class="letter">d</span>
                     <span class="letter">d</span>
                     <span class="letter">o</span>
                     <span class="letter">s</span>
+                    <span class="letter"> </span>
+                    <span class="letter">C</span>
+                    <span class="letter">a</span>
+                    <span class="letter">l</span>
+                    <span class="letter">m</span>
                 </span>
             </a>
 
@@ -131,22 +130,8 @@ body
 }
 /*--------------navbar toggler---------------*/
 /* Tombol navbar-toggler */
-/* Tombol navbar-toggler */
 .navbar-toggler {
-    border: none; /* Hilangkan border */
-    background-color: transparent; /* Background transparan */
-    padding: 3px; /* Padding lebih kecil */
-    position: absolute; /* Posisi absolut untuk pojok kanan */
-    top: 8px; /* Jarak dari atas */
-    right: 8px; /* Jarak dari kanan */
-    z-index: 1050; /* Pastikan di atas elemen lain */
-    height: 30px; /* Tinggi tombol kecil */
-    width: 30px; /* Lebar tombol kecil */
-    display: flex; /* Untuk memusatkan ikon */
-    justify-content: center;
-    align-items: center;
-    outline: none; /* Hilangkan outline default */
-    transition: transform 0.3s ease, background-color 0.3s ease; /* Efek transisi */
+    display: none;   
 }
 
 /* Hover pada tombol */
@@ -158,13 +143,13 @@ body
 
 /* Ikon dalam tombol (font-awesome) */
 .navbar-toggler .fa-bars {
-    font-size: 0.8rem; /* Ukuran ikon lebih kecil */
+    font-size: 0.1rem; /* Ukuran ikon lebih kecil */
     color: #333; /* Warna ikon */
     transition: color 0.3s ease; /* Efek transisi warna */
 }
 
 .navbar-toggler:hover .fa-bars {
-    color: #007bff; /* Warna biru saat hover */
+    color: #e91e63; /* Warna biru saat hover */
 }
 
 /* Responsif: Pastikan tombol tetap berada di pojok kanan */
@@ -235,11 +220,11 @@ body
 }
 
 .letter:nth-child(5) {
-    color: #FFFFFF;
+    color: #295F98;
 }
 
 .letter:nth-child(6) {
-    color: #ff4880;
+    color: #295F98;
 }
 
 .letter:nth-child(7) {
@@ -673,7 +658,7 @@ input[type=file]:hover {
 
 <!--------------------------KUISIONER------------------------------>
 <section id="kuisioner">
-	<h1>Kuisioner Pendukung Perilaku Kejadian Tantrum</h1>
+	<h3 class="title-kuis">Kuisioner Pendukung Perilaku Kejadian Tantrum</h3>
 	<h2>NB:Pilihlah sesuai dengan beberapa ciri-ciri perilaku kejadian tantrum anak Anda</h2>
 	<form action="/tantrum" method="POST">
 	
@@ -803,12 +788,22 @@ input[type=file]:hover {
     padding: 10px 10px;
     margin: 10px 10px;
 }
+.title-kuis {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+    text-align: center;
+    color: #133E87;
+    padding: 10px 10px;
+    margin: 10px 10px;
+}
 h2 {
 	text-align: left;
 	font-size: 1.0em;
 	margin: 10px auto;
 	max-width: 50%;
-		  }
+}
+
 .center {
     width: 80%;
     margin: 20px auto;
@@ -824,7 +819,7 @@ h2 {
 .center th {
     padding: 15px;
     text-align: center;
-    background-color: #ffeb99; /* Kuning pastel */
+    background-color: #ffd4d4; /* Kuning pastel */
     color: #333333;
     font-family: 'Arial', sans-serif;
     font-size: 1.1em;
@@ -832,7 +827,7 @@ h2 {
 
 /* Kategori rendah */
 .center td.Kategori-rendah {
-    background-color: #e6f7ff; /* Biru pastel */
+    background-color: #fff9cc; /* Biru pastel */
     padding: 12px;
     text-align: left;
     border-radius: 5px;
@@ -964,7 +959,7 @@ h2 {
   
 <html>
 <body>
-	<h1>Rekomendasi Pilihan Video Edukasi Tantrum</h1>
+	<h3 class="title">Rekomendasi Pilihan Video Edukasi Tantrum</h3>
 	<table>
 		<col class="rendah">
 		<col class="tinggi">
@@ -1017,13 +1012,13 @@ h2 {
 			padding: 8px;
 		}
 		th {
-			background-color:  #FFD4D4;
+			background-color: #ffd4d4;
 		}
 		.tinggi {
-			background-color: #ccffcc;
+			background-color: #fff9cc;
 		}
 		.rendah {
-			background-color: #ccffcc;
+			background-color: #fff9cc;
 		}
 	</style>
 		<style>
@@ -1083,6 +1078,8 @@ margin-top: 50px;
 	margin-top: 200;
 	margin-bottom: 30px;
 	text-align: center;
+    font-family: 'Fredoka', sans-serif;
+    color: #133E87;
 }
 .text-center p{
 	margin-top: 15;
@@ -1108,7 +1105,7 @@ margin-top: 50px;
     <!-- Wave at the top of the footer -->
     <div class="footer-wave">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
-            <path fill="#EDDFE0" d="M0,64L30,96C60,128,120,192,180,202.7C240,213,300,171,360,170.7C420,171,480,213,540,213.3C600,213,660,171,720,170.7C780,171,840,213,900,202.7C960,192,1020,128,1080,96C1140,64,1200,96,1260,96C1320,96,1380,64,1440,53.3L1440,0L1380,0C1320,0,1260,0,1200,0C1140,0,1080,0,1020,0C960,0,900,0,840,0C780,0,720,0,660,0C600,0,540,0,480,0C420,0,360,0,300,0C240,0,180,0,120,0C60,0,30,0,0,0Z"></path>
+            <path fill="#F8EDE3" d="M0,64L30,96C60,128,120,192,180,202.7C240,213,300,171,360,170.7C420,171,480,213,540,213.3C600,213,660,171,720,170.7C780,171,840,213,900,202.7C960,192,1020,128,1080,96C1140,64,1200,96,1260,96C1320,96,1380,64,1440,53.3L1440,0L1380,0C1320,0,1260,0,1200,0C1140,0,1080,0,1020,0C960,0,900,0,840,0C780,0,720,0,660,0C600,0,540,0,480,0C420,0,360,0,300,0C240,0,180,0,120,0C60,0,30,0,0,0Z"></path>
         </svg>
     </div>
 
@@ -1120,7 +1117,9 @@ margin-top: 50px;
                     <i class="fa-brands fa-facebook-square"></i>
                     <i class="fa-brands fa-twitter-square"></i>
                     <i class="fa-brands fa-instagram-square"></i>
-                    <i class="fa-brands fa-linkedin"></i>
+                    <a href="https://www.linkedin.com/in/salsyabilavidia/" target="https://www.linkedin.com/in/salsyabilavidia/" rel="noopener noreferrer">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
                 </div>
             </div>
             <div class="col-md-4 footer-box">
@@ -1147,7 +1146,7 @@ margin-top: 50px;
     color: #4A4A4A;  /* Dark gray text color */
     padding-bottom: 50px;
     position: relative;
-    overflow: hidden;  /* Hide any overflow to prevent wave from exceeding boundary */
+    overflow: hidden;
 }
 
 /* Create the wave effect using SVG */
