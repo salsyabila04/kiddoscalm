@@ -141,9 +141,39 @@ body
     background-color: none; 
 }
 
-@media (max-width: 992px) {
+@media(max-width: 768px){
+    .navbar-brand{
+        display: block;
+        position: fixed;
+    }
+    .navbar-collapse{
+        display: block !important;
+        text-align: left;
+        padding: 10px 0;
+    }
+    .navbar-nav .nav-item {
+        margin: 10px 0;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
     .navbar-toggler {
         display: block !important;
+    }
+    .navbar-nav .nav-link{
+        position: relative;
+        z-index: 1000;
+        padding: 10px 15px;
+    }
+    .logo-text {
+        width: 100%;
+        height: auto;
+        }
+}
+
+@media (min-width: 993px) {
+    .navbar-nav .nav-link {
+        padding: 10px 15px;
     }
 }
 /*----------------end toggler---------------*/
@@ -377,7 +407,38 @@ body
 {
 	background-color: rgba(0,0,0,0.7);
 }
+/*----------------media query----------------------*/
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+    .navbar-collapse {
+        max-height: 340px;
+        width: 60%;
+        display: block !important;
+    }
+    
+}
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+    .navbar-nav {
+        width: 60%;
+        padding: 10px 0;
+    }
+    .navbar-nav .mx-auto {
+        padding-top: 15px;
+        align-text: center;
+    }
+}
 
+@media (max-width: 992px) {
+    .navbar-nav .mx-auto {
+        padding-top: 15px;
+        align-text: center;
+    }
+}
 
 
 /*--------------CONTACT US---------------*/
