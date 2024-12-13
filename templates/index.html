@@ -701,270 +701,186 @@ input[type=file]:hover {
 </style>
 
 <!--------------------------KUISIONER------------------------------>
-<section id="kuisioner">
-	<h3 class="title-kuis">Tabel Pendukung Perilaku Kejadian Tantrum</h3>
+<h1>Kuisioner Pendukung Perilaku Kejadian Tantrum</h1>
 	<h2>NB:Pilihlah sesuai dengan beberapa ciri-ciri perilaku kejadian tantrum anak Anda</h2>
-	<form action="/tantrum" method="POST ">
+	<form action="/tantrum" method="POST">
 	
-    <table class="center">
-        <col class="Kategori rendah">
-        <col class="Kategori tinggi">
+	<table class="center">
+		<col class="Kategori rendah">
+		<col class="Kategori tinggi">
+		<section id="gejala">
+		<tr>
+			<th> <input type="checkbox" class="form-check-input" name="gejala[]" value="1" id="check1"> 
+				<label class="form-check-label" for="check1">Kategori Tantrum Rendah</label>
+			</th>
+			<th><input type="checkbox" class="form-check-input" name="gejala[]" value="2" id="check2"> 
+				<label class="form-check-label" for="check2">Kategori Tantrum Tinggi</label>
+			</th>
+		</tr>
+		<section id="checkbox">
+			<div class="checkbox-wrapper">
+				<form action="/tantrum" method="POST">
+		<tr>
+			<td>
+				<a>Anak Anda Menangis dengan berteriak / menjerit dengan intensitas menangis 5-10 menit dalam sehari</a>
+				
+			</td>
+			<td> 
+				<a> Anak Anda Menangis dengan melukai diri sendiri atau orang lain dengan intensitas menangis > 15 menit dalam sehari</a>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<a> Anak Anda Menangis dengan mengentakkan kaki dengan intensitas menangis 5-10 menit dalam sehari</a>
+			</td>
+			<td>
+				<a>Anak Anda Menangis dengan melempar barang dengan intensitas menangis > 15 menit dalam sehari</a>
+				
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<a>Anak Anda Menangis dengan menjatuhkan diri ke lantai dengan intensitas meangis 5-10 menit dalam sehari</a>
+			</td>
+			<td>
+				<a> Anak Anda Menangis dengan megumpat atau berkata kasar dengan intensitas menangis > 15 menit dalam sehari</a>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<a> Anak Anda Menangis dengan menggapai lengan tangan atau lengan kaki orang tua dengan intensitas menangis 5-10 menit dalam sehari</a>
+			</td>
+			<td>
+				<a> Anak Anda Menangis dengan tatapan marah dengan intensitas menangis > 15 menit dalam sehari</a>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<a> Anak Anda Menangis dengan mendorong-dorong orang tua dengan intensitas menangis 5-10 menit dalam sehari</a>
+			</td>
+			<td>
+				<a> Anak Anda Menangis dengan melukai diri sendiri atau orang lain terjadi > 5x dalam seminggu</a>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<a>Anak Anda Menangis dengan menarik badan orang tua dengan intensitas menangis 5-10 menit dalam sehari</a>
+			</td>
+			<td>
+				<a> Anak Anda Menangis dengan melempar barang terjadi > 5x dalam seminggu</a>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<a>Anak Anda Menangis dengan berteriak / menjerit terjadi < 5x dalam seminggu</a>
+			</td>
+			<td>
+				<a> Anak Anda Menangis dengan mengumpat atau berkata kasar terjadi > 5x dalam seminggu</a>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<a> Anak Anda Menangis dengan menghentakkan kaki terjadi < 5x dalam seminggu</a>
+			</td>
+			<td>
+				<a> Anak Anda Menangis dengan tatapan marah terjadi > 5x dalam seminggu</a>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<a> Anak Anda Menangis dengan menjatuhkan diri ke lantai terjadi < 5x dalam seminggu</a>
+			</td>
+			<td>
+				<a></a>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<a> Anak Anda Menangis dengan menggapai lengan kaki / lengan tangan terjadi < 5x dalam seminggu</a>
+			</td>
+			<td>
+				<a></a>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<a> Anak Anda Menangis dengan mendorong-dorong orang tua terjadi < 5x dalam seminggu</a>
+			</td>
+			<td>
+				<a></a>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<a> Anak Anda Menangis dengan menarik badan orang tua terjadi < 5x dalam seminggu</a>
+			</td>
+			<td>
+				<a></a>
+			</td>
+		</tr>
+		
+	</table>
+	<section id="submit">
+		<input type="submit" value="Mulai Prediksi" class="btn waves-effect waves-light">
 
-        <section id="gejala">
-            <tr>
-                <th>
-                    
-                    <label class="form-check-label" for="check1">Kategori Tantrum Rendah</label>
-                </th>
-                <th>
-                    
-                    <label class="form-check-label" for="check2">Kategori Tantrum Tinggi</label>
-                </th>
-            </tr>
-            <section id="checkbox">
-                <div class="checkbox-wrapper">
-                    <form action="/tantrum" method="POST">
-                        <tr>
-                            <td class="Kategori-rendah">
-                                <a>Anak Anda Menangis dengan berteriak / menjerit dengan intensitas menangis 5-10 menit dalam sehari</a>
-                            </td>
-                            <td class="Kategori-tinggi">
-                                <a> Anak Anda Menangis dengan melukai diri sendiri atau orang lain dengan intensitas menangis > 15 menit dalam sehari</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="Kategori-rendah">
-                                <a> Anak Anda Menangis dengan mengentakkan kaki dengan intensitas menangis 5-10 menit dalam sehari</a>
-                            </td>
-                            <td class="Kategori-tinggi">
-                                <a>Anak Anda Menangis dengan melempar barang dengan intensitas menangis > 15 menit dalam sehari</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="Kategori-rendah">
-                                <a>Anak Anda Menangis dengan menjatuhkan diri ke lantai dengan intensitas menangis 5-10 menit dalam sehari</a>
-                            </td>
-                            <td class="Kategori-tinggi">
-                                <a> Anak Anda Menangis dengan mengumpat atau berkata kasar dengan intensitas menangis > 15 menit dalam sehari</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="Kategori-rendah">
-                                <a> Anak Anda Menangis dengan menggapai lengan tangan atau lengan kaki orang tua dengan intensitas menangis 5-10 menit dalam sehari</a>
-                            </td>
-                            <td class="Kategori-tinggi">
-                                <a> Anak Anda Menangis dengan tatapan marah dengan intensitas menangis > 15 menit dalam sehari</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="Kategori-rendah">
-                                <a> Anak Anda Menangis dengan mendorong-dorong orang tua dengan intensitas menangis 5-10 menit dalam sehari</a>
-                            </td>
-                            <td class="Kategori-tinggi">
-                                <a> Anak Anda Menangis dengan melukai diri sendiri atau orang lain terjadi > 5x dalam seminggu</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="Kategori-rendah">
-                                <a>Anak Anda Menangis dengan menarik badan orang tua dengan intensitas menangis 5-10 menit dalam sehari</a>
-                            </td>
-                            <td class="Kategori-tinggi">
-                                <a> Anak Anda Menangis dengan melempar barang terjadi > 5x dalam seminggu</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="Kategori-rendah">
-                                <a>Anak Anda Menangis dengan berteriak / menjerit terjadi < 5x dalam seminggu</a>
-                            </td>
-                            <td class="Kategori-tinggi">
-                                <a> Anak Anda Menangis dengan mengumpat atau berkata kasar terjadi > 5x dalam seminggu</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="Kategori-rendah">
-                                <a> Anak Anda Menangis dengan menghentakkan kaki terjadi < 5x dalam seminggu</a>
-                            </td>
-                            <td class="Kategori-tinggi">
-                                <a> Anak Anda Menangis dengan tatapan marah terjadi > 5x dalam seminggu</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="Kategori-rendah">
-                                <a> Anak Anda Menangis dengan menjatuhkan diri ke lantai terjadi < 5x dalam seminggu</a>
-                            </td>
-                            <td class="Kategori-tinggi">
-                                <a></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="Kategori-rendah">
-                                <a> Anak Anda Menangis dengan menggapai lengan kaki / lengan tangan terjadi < 5x dalam seminggu</a>
-                            </td>
-                            <td class="Kategori-tinggi">
-                                <a></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="Kategori-rendah">
-                                <a> Anak Anda Menangis dengan mendorong-dorong orang tua terjadi < 5x dalam seminggu</a>
-                            </td>
-                            <td class="Kategori-tinggi">
-                                <a></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="Kategori-rendah">
-                                <a> Anak Anda Menangis dengan menarik badan orang tua terjadi < 5x dalam seminggu</a>
-                            </td>
-                            <td class="Kategori-tinggi">
-                                <a></a>
-                            </td>
-                        </tr>
-                    </form>
-                </div>
-    </table>
-        
-    </section>
-<style>
-#kuisioner {
-    padding: 10px 10px;
-    margin: 10px 10px;
-}
-.title-kuis {
-    font-family: 'Fredoka', sans-serif;
-    font-weight: 600;
-    font-size: 36px;
-    text-align: center;
-    color: #133E87;
-    padding: 10px 10px;
-    margin: 10px 10px;
-}
-h2 {
-	text-align: left;
-	font-size: 1.0em;
-	margin: 10px auto;
-	max-width: 50%;
-}
-
-.center {
-    width: 80%;
-    margin: 20px auto;
-    border-collapse: collapse;
-    border-radius: 10px;
-    overflow: hidden;
-    background-color: #ffffff; /* Latar belakang putih */
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan lembut */
-}
-
-/* Header */
-.center th {
-    padding: 15px;
-    text-align: center;
-    background-color: #ffd4d4; /* Kuning pastel */
-    color: #333333;
-    font-family: 'Arial', sans-serif;
-    font-size: 1.1em;
-}
-
-/* Kategori rendah */
-.center td.Kategori-rendah {
-    background-color: #fff9cc; /* Biru pastel */
-    padding: 12px;
-    text-align: left;
-    border-radius: 5px;
-    font-family: 'Arial', sans-serif;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-/* Kategori tinggi */
-.center td.Kategori-tinggi {
-    background-color: #fff9cc; /* Kuning pastel */
-    padding: 12px;
-    text-align: left;
-    border-radius: 5px;
-    font-family: 'Arial', sans-serif;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-/* Efek hover untuk baris */
-.center tr:hover td {
-    background-color: #d4f1ff; /* Biru pastel lebih terang */
-    transform: scale(1.02); /* Sedikit memperbesar */
-    cursor: pointer;
-}
-.center tr:hover td.Kategori-tinggi {
-    background-color: #CCD5AE;
-    transform: scale(1.02);
-    cursor: pointer;
-}
-.center tr:hover td.Kategori-rendah {
-    
-    transform: scale(1.02);
-    cursor: pointer;
-}
-
-/* Label checkbox */
-.form-check-label {
-    font-size: 1em;
-    color: #333333;
-}
-
-/* Checkbox wrapper */
-.checkbox-wrapper {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-/* Tombol Submit */
-#submit input[type="submit"] {
-    background-color: #a4d8ff; /* Biru pastel */
-    color: #333333;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1em;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-#submit {
-    text-align: center;
-    margin-top: 20px;
-}
-#submit input[type="submit"]:hover {
-    background-color: #F7B5CA; /* Kuning pastel lebih terang */
-    transform: translateY(-2px); /* Sedikit naik saat hover */
-}
-
-/* Alternatif: Warna tema hanya dua */
-.center tr:nth-child(odd) {
-    background-color: #f0f8ff; /* Biru pastel sangat terang */
-}
-
-.center tr:nth-child(even) {
-    background-color: #fffaf3; /* Kuning pastel sangat terang */
-}
-
-/* Responsif */
-@media (max-width: 768px) {
-    .center td,
-    .center th {
-        display: block;
-        width: 100%;
-    }
-
-    #submit input[type="submit"] {
-        width: 100%;
-    }
-}
-
-</style>
+	</section>
+	<style>
+		table.center {
+            margin: auto;
+            border-collapse: collapse;
+            width: 80%;
+        }
+		  
+		table th, table td {
+			padding: 8px;
+			text-align:center;
+			border-bottom: 1px solid #ddd;
+		  }
+		  
+		  tr:hover {
+			background-color: #f5f5f5;
+		  }
+		  
+		  .Kategori rendah{
+			text-align: left;
+			
+			background-color: #e8e8e8;
+		  }
+		  
+		  .Kategori tinggi{
+			text-align: left;
+			font-weight: bold;
+			background-color: #e8e8e8;
+		  }
+		  #submit {
+			text-align: center;
+			padding: 18px;
+		}
+		#submit input[type="submit"] {
+			background-color: #FFD1D1;
+			color: black;
+			style:bold;
+			padding: 12px 20px;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+			font-size: 12px;
+		}	  
+		#submit input[type="submit"]:hover {
+			background-color: #E5E0FF; 
+		}
+		h2 {
+			text-align: left;
+			font-size: 1.0em;
+			margin: 0 auto;
+			max-width: 50%;
+		  }
+		
+		 
+	</style>
 	    </div>
 	</section>
+</section>
 	
 
 <!---------------------------END KUISIONER-------------------------->
