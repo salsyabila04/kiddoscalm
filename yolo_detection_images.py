@@ -122,7 +122,7 @@ def get_predection(image,net,LABELS,COLORS):
 def runModel(image):
     # load our input image and grab its spatial dimensions
     # image = cv2.imread(img)
-    labelsPath="darknet/data/obj.names"
+    labelsPath="./darknet/data/obj.names"
     cfgpath="./yolov4-custom.cfg"
     wpath="yolov4-custom_best.weights"
     Lables=get_labels(labelsPath)
