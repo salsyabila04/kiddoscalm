@@ -1,5 +1,5 @@
 # Gunakan image Python resmi sebagai base image
-FROM python:3.13
+FROM python:3.10
 
 # libGL.so.1
 RUN apt-get update && apt-get install -y libgl1-mesa-glx libglib2.0-0
@@ -8,10 +8,10 @@ RUN apt-get update && apt-get install -y libgl1-mesa-glx libglib2.0-0
 WORKDIR /app
 
 # Salin file requirements.txt ke container
-COPY requirements.txt /app/requirements_docker.txt
+COPY requirements.txt /app/requirement.txt
 
 # Instal semua dependensi dari requirements.txt
-RUN pip install --no-cache-dir -r requirements_docker.txt
+RUN pip install --no-cache-dir -r requirement.txt
 
 # Salin semua file aplikasi ke container
 COPY . /app
