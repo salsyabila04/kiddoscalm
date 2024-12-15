@@ -1,5 +1,5 @@
 # Gunakan image Python resmi sebagai base image
-FROM python:3.9-slim
+FROM python:3.13-slim
 
 # libGL.so.1
 RUN apt-get update && apt-get install -y libgl1-mesa-glx libglib2.0-0
