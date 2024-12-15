@@ -46,4 +46,4 @@ sqlparse==0.5.1
 tzdata==2024.2
 uritemplate==4.1.1
 urllib3==2.2.3
-Werkzeug==3.0.4
+Werkzeug==2.2.2
