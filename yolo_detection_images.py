@@ -54,7 +54,7 @@ def get_predection(image,net,LABELS,COLORS):
     layerOutputs = net.forward(ln)
     print(layerOutputs)
     end = time.time()
-
+  
     # show timing information on YOLO
     print("[INFO] YOLO took {:.6f} seconds".format(end - start))
 
@@ -88,12 +88,18 @@ def get_predection(image,net,LABELS,COLORS):
 
                 # use the center (x, y)-coordinates to derive the top and
                 # and left corner of the bounding box
-                x = int(centerX - (width / 2))
-                y = int(centerY - (height / 2))
+                # x = int(centerX - (width / 2))
+                # y = int(centerY - (height / 2))
+                
+                x = max(0, int(centerX - (width / 2)))
+                y = max(0, int(centerY - (height / 2)))
+                w = min(W - x, int(width))
+                h = min(H - y, int(height))
 
                 # update our list of bounding box coordinates, confidences,
                 # and class IDs
-                boxes.append([x, y, int(width), int(height)])
+                # boxes.append([x, y, int(width), int(height)])
+                boxes.append([x, y, w, h])
                 confidences.append(float(confidence))
                 classIDs.append(classID)
 
@@ -107,16 +113,30 @@ def get_predection(image,net,LABELS,COLORS):
         # loop over the indexes we are keeping
         for i in idxs.flatten():
             # extract the bounding box coordinates
-            (x, y) = (boxes[i][0], boxes[i][1])
-            (w, h) = (boxes[i][2], boxes[i][3])
-
-            # draw a bounding box rectangle and label on the image
+            # (x, y) = (boxes[i][0], boxes[i][1])
+            # (w, h) = (boxes[i][2], boxes[i][3])
+            
+            (x, y, w, h) = boxes[i]
+            
             color = [int(c) for c in COLORS[classIDs[i]]]
             cv2.rectangle(image, (x, y), (x + w, y + h), color, 2)
-            text = "{}: {:.4f}".format(LABELS[classIDs[i]], confidences[i])
-            print(boxes)
-            print(classIDs)
-            cv2.putText(image, text, (x, y - 5), cv2.FONT_HERSHEY_SIMPLEX, 1.5, color, 2)
+            
+            #label
+            text = "{}: {:.2f}%".format(LABELS[classIDs[i]], confidences[i] * 100)
+            font_scale = 0.5 if min(W, H) < 800 else 1
+            font_thickness = 1
+            (text_width, text_height), baseline = cv2.getTextSize(text, cv2.FONT_HERSHEY_SIMPLEX, font_scale, font_thickness)
+            cv2.rectangle(image, (x, y - text_height - 10), (x + text_width, y), color, -1)
+            cv2.putText(image, text, (x, y - 5), cv2.FONT_HERSHEY_SIMPLEX, font_scale, (255, 255, 255), font_thickness)
+
+
+            # draw a bounding box rectangle and label on the image
+            # color = [int(c) for c in COLORS[classIDs[i]]]
+            # cv2.rectangle(image, (x, y), (x + w, y + h), color, 2)
+            # text = "{}: {:.4f}".format(LABELS[classIDs[i]], confidences[i])
+            # print(boxes)
+            # print(classIDs)
+            # cv2.putText(image, text, (x, y - 5), cv2.FONT_HERSHEY_SIMPLEX, 1.5, color, 2)
     return image
 
 def runModel(image):
