@@ -27,7 +27,7 @@ Deteksi Tantrum Anak Balita
 4. Run docker image in detached mode and map to port 4000, 5000 is application port
 
 ```bash
-    docker run -d -p 4000:5000 kiddoscalm
+    docker run -d -p 4000:5000 --name kiddoscalm kiddoscalm
 ```
 
 5. Enjoy
