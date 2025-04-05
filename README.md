@@ -18,5 +18,17 @@ Deteksi Tantrum Anak Balita
     git lfs pull
 ```
 
-3. Enjoy
+3. Build docker image
+
+```bash
+    docker build -t kiddoscalm .
+```
+
+4. Run docker image in detached mode and map to port 4000, 5000 is application port
+
+```bash
+    docker run -d -p 4000:5000 kiddoscalm
+```
+
+5. Enjoy
     
